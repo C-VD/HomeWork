@@ -3,13 +3,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         // Прочитать фигуры из файла
         ArrayList<Figure> figures = readFiguresFromFile();
         if (figures == null) {
             return;
         }
-        // Отсортировать
+        // Отсортировать по площади
         figures.sort((o1, o2) -> Double.compare(
                 o1.calcArea(),
                 o2.calcArea()
